@@ -174,7 +174,7 @@ Element wrapper for the Firebase authentication API (https://www.firebase.com/do
           this.login(this._queuedLogin.params, this._queuedLogin.options);
           this._queuedLogin = null;
         } else if (!this.statusKnown && this.autoLogin) {
-          this.login();
+          this.async(this.login());
         }
 
         this._setStatusKnown(true);
